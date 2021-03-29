@@ -331,6 +331,9 @@
   <ItemGroup>
     <Compile Include="OreStatusConfig.cs" />
     <Compile Include="OreStatus.cs" />
+    <Compile Include="OreStatusUtils.cs" />
+    <Compile Include="PatchDestructible.cs" />
+    <Compile Include="PatchMineRock.cs" />
     <Compile Include="PatchMineRock5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

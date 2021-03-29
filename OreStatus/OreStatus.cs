@@ -8,7 +8,7 @@ namespace OreStatus
     {
         public const string GUID = "uk.co.jowleth.valheim.orestatus";
         public const string MOD_NAME = "Ore Status";
-        public const string VERSION = "0.0.1";
+        public const string VERSION = "0.0.2";
 
         public enum DisplayType { HealthBar, Percentage, Disabled }
 
@@ -18,6 +18,8 @@ namespace OreStatus
             if (OreStatusConfig.modEnabled.Value)
             {
                 Harmony.CreateAndPatchAll(typeof(PatchMineRock5), null);
+                Harmony.CreateAndPatchAll(typeof(PatchMineRock), null);
+                Harmony.CreateAndPatchAll(typeof(PatchDestructible), null);
             }
         }
     }
