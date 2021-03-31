@@ -20,11 +20,11 @@ namespace OreStatus
                     {
                         if (i <= percentageBase2)
                         {
-                            progress += "<color=#00CC00>█</color>";
+                            progress += "<color=#00CC00>▄</color>";
                         }
                         else
                         {
-                            progress += "<color=#CC0000>█</color>";
+                            progress += "<color=#CC0000>▄</color>";
                         }
                     }
                     return progress;

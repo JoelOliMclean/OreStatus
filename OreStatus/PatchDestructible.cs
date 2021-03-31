@@ -11,7 +11,7 @@ namespace OreStatus
         [HarmonyPostfix]
         internal static void RPC_Damage_Post(ref Destructible __instance, long sender, HitData hit)
         {
-            if (__instance.gameObject.name.Contains("MineRock_Tin") && !OreStatusConfig.displayType.Value.Equals(DisplayType.Disabled))
+            if ((__instance.gameObject.name.Contains("MineRock_Tin") || __instance.gameObject.name.Contains("MineRock_Obsidian")) && !OreStatusConfig.displayType.Value.Equals(DisplayType.Disabled))
             {
                 var m_nview = AccessTools.Field(typeof(Destructible), "m_nview").GetValue(__instance) as ZNetView;
                 if (m_nview.IsValid())
